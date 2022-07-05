@@ -1,5 +1,5 @@
 /* Exploratory Data Analysis of COVID 19 Data over 160,000 attribute
-Skills: Converting Data Type, Joins, Aggregate Function, CTE's, Temp Tables, Createing Views
+Skills: Converting Data Type, Joins, Aggregate Function, CTE's, Temp Tables, Creating Views
 */
 
 -- Checking all attributes in the Covid Deaths file
