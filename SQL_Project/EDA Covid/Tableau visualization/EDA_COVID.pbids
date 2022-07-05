@@ -1,0 +1,1 @@
+{"version":"1.0","connections":[{"details":{"protocol":"tds","address":{"server":"nguyendmnhu.database.windows.net","database":"EDA_COVID"}},"mode":"DirectQuery"}]}
