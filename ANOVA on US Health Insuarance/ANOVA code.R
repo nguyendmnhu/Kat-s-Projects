@@ -29,7 +29,6 @@ ggboxplot(data, x = "children", y = "charges", color = "smoker",
 ggline(data, x="children",y="charges",color="smoker",
        add = c("mean_se"))
 
-##Try to rewrite the code with for loop
 
 #Identify the minimum observation
 smoke <- c('yes','no')
@@ -43,7 +42,6 @@ for (i in sort(unique(children))){
 }
 observation
 min(observation)
-# min_observation is 43
 
 # For loop to extract each level of factor
 t=c('yes','no')
@@ -93,25 +91,35 @@ new_data$smoker=as.factor(new_data$smoker)
 anova<-aov(log(charges)~smoker*children,data=new_data)
 
 #Check the assumptions
-par(mfrow=c(1,2))
-#Check Homogeneity
-plot(anova,1)
-#Check assumptions
-plot(anova,2)
+# 1, Independent variables
+plot(anova$residuals)
+# => The points are randomly scattered all over the plot => smoker and children are independent.
 
-#Shapiro test
-aov_residuals <- residuals(object = anova)
-shapiro.test(x = aov_residuals )
+#2, Normality: By plot and by Shapiro Testt
+qqnorm(anova$residuals)
+qqline(anova$residuals)
+# => The tails quite off, process to Shapiro Test. 
+# Shapiro Test has Null Hypothesis that the samples come from a normal distribution
+shapiro.test(anova$residuals)
+#p-value > 0.05 => Fail to reject H0. The data is normal
 
-#Levine test:
+#3, Equal Variance/Homogeneity: By plot and Levene's test
+boxplot(log(charges)~smoker*children)
+# => The variance within each group are violate the homogeneity assumptions, process to Levene's Test.
+#Levene's test has Null Hypothesis that the sample variances are equal
 library(car)
-leveneTest(charges ~ smoker*children, data = new_data)
+leveneTest(log(charges) ~ smoker*children, data = new_data)
+#Optional: bartlett.test(charges ~ interaction(smoker,children), data = new_data)
+# p-value > 0.05 => Fail to reject H0. The variance are equal.
 
-#The assumptions are not violated, interpret the model:
+
+#Performing ANOVA:
 summary(anova)
+# P-value of children is larger than 0.05 => Fail to reject H0A
+# P-value of smoker is significantly small => Reject H0B
+# P-value of interaction between children and smoker is greater than 0.05 => Fail to reject H0AB
 
-#Tukey's pairwise if p above significant
+
+#Tukey's Test if there is significant different in price between yes/no smoking
 TukeyHSD(anova,which='smoker')$smoker
-
-
-
+# => P-adj is significantly small. There is a different in insuarance price between group of smoking and non-smoking
