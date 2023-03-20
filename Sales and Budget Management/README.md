@@ -1,4 +1,5 @@
 # Sales and Budget Management Project
+[Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYjY3ZmU4YmItMTgyNi00MjFmLWE3ODAtYWFhMTk1NGRjMWIwIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9&pageName=ReportSection5d5ab9e44106cc8b7400)\
 ### 1, Identify The Business Request:
 
 As a Data Analyst, my client/sales managers requested an executive sales report for his company. When receiving a task from customer, my first step is highlighting all the key points my customer want to be include in the project outcome.\
@@ -40,5 +41,5 @@ Step 3: Create Product Details with What if parameter to filter the top products
 ![product_details](https://user-images.githubusercontent.com/107152014/224838756-a3552556-48b2-4f71-9a62-bb0b646aeefc.jpg)
 
 
-[Power BI Dashboard](https://github.com/nguyendmnhu/Kat-s-Projects/blob/main/Sales%20and%20Budget%20Management/Sale%20Report.pbix)\
-NOTE: I am currently using my school email so only SJSU students can publishly interact with my dashboard on Power BI online. Please make a download to your computer to have a deeper look at my dashboard.
+
+
