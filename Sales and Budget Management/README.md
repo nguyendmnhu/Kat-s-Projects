@@ -1,5 +1,5 @@
 # Sales and Budget Management Project
-[Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYjY3ZmU4YmItMTgyNi00MjFmLWE3ODAtYWFhMTk1NGRjMWIwIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9&pageName=ReportSection5d5ab9e44106cc8b7400)\
+[Power BI Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYjY3ZmU4YmItMTgyNi00MjFmLWE3ODAtYWFhMTk1NGRjMWIwIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9&pageName=ReportSection5d5ab9e44106cc8b7400)
 ### 1, Identify The Business Request:
 
 As a Data Analyst, my client/sales managers requested an executive sales report for his company. When receiving a task from customer, my first step is highlighting all the key points my customer want to be include in the project outcome.\
